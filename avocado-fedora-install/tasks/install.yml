@@ -5,9 +5,17 @@
     url: https://repos-avocadoproject.rhcloud.com/static/avocado-fedora.repo
     dest: /etc/yum.repos.d/avocado.repo
     mode: 0640
-
+  tags:
+    - packages
+    
 - name: Install avocado
   dnf: name=avocado state=latest
+  tags:
+    - install
+    - packages
 
 - name: Install avocado html plugin
   dnf: name=avocado-plugins-output-html state=latest
+  tags:
+    - install
+    - packages
